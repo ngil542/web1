@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--2022 Page by N.Gilmore, academic page-->
+
+<html>
+
+<!--The Rho Corp: Rho, letter p, value = 100, meaning: head-->
+<style>
+   body { 
+      background-color: rgb(204, 245, 204);
+      
+   }
+   
+   #header {
+   background-color: olivedrab;  
+	position: fixed;  
+	left: 0px;  
+	right: 0px;  
+	top: 0px;  
+	height: 75px;  
+	display: flex; 
+	align-items: center;  
+	box-shadow: 0 0 25px 0 black;  
+    
+	}  
+	#header * {  
+	display: inline;  
+	}  
+	#header li {  
+	margin: 40px;  
+	}  
+	#header li a {  
+	color: rgb(31, 31, 43);  
+	text-decoration: none;  
+	}  
+
+   #navbar {
+      position: relative;
+      top: 0px;
+      left: 0px;
+   }
+  
+   .nav-link {
+     font-weight: bold;
+      position: fixed;
+      top: 0px;
+      left: 400px;
+   }
+  
+   #company-logo {
+      position: absolute;
+      top: 0px;
+      left: 10px;
+       
+   }
+   .rho-info {
+      position: fixed;
+      top: 250px;
+      left: 100px;
+
+   }
+   #form {
+      position: fixed;
+      padding-top: 400px;
+      left: 100px;
+   }
+   @media screen and (max-width: 960px){
+      #form{
+       position: fixed;
+       top: 200;
+        left:auto;
+      }
+   } 
+</style>   
+<!--User Story #13 navbar at top of viewport in the header and style section, User Story #14 with one media query--> 
+<!--User Story #15, header uses a flexbox-->
+
+
+<!--User Story #1, User Story #13 navbar at top of viewport in the header and style section--> 
+<header id="header">
+   
+    <!--User Story #2-->
+    <img id="company-logo" class="img-responsive" src="C:\Users\ngilm\Pictures\rhoco2cr.png" alt="Company Logo">
+
+    <!--User Story #3, nav element, nav-bar-->
+   <nav id="nav-bar">
+  
+    <main>
+         <!--User Story #4, #5, each link class nav-link, taken to the corresponding page-->
+         <!--User Story #6-->
+         <ul class="nav-link">
+            <li><a href="D:\ngilm\Documents\prodpage\service1.html">Services</a></li>   
+            <li><a href="D:\ngilm\Documents\prodpage\support1.html">Support</a></li>
+            <li><a href="D:\ngilm\Documents\prodpage\contact1.html">Contact</a></li>
+            <li><a href="D:\ngilm\Documents\prodpage\about1.html">About</a></li>
+         </ul>
+    </main>
+    </nav>
+   </header>
+
+   <div class="rho-info">
+
+      <h2>Consulting Services for your IT Business Solutions</h2>
+      <ul style="list-style-type:disc">
+         <li>Business Cell Phones and Plans</li>
+         <li>Business Computer PCs and Laptops</li>
+         <li>Operating Systems and Software</li>
+         <li>Cloud Services</li>   
+      </ul>
+
+   </div>
+
+   <!--User Story #7, User Story #12, submit email to static page-->
+   <form action=" https://www.freecodecamp.com/email-submit" id="form">
+      
+      <!--User Story #8, #9, #10 note: new regex line for email validation, order of operations to read email-->
+      <label for="email">Email: 
+      <input type="email" id="email" input pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" required placeholder="Email"></input>
+      </label>
+
+      <!--User Story #11, user submit, User Story #12 email is submitted to a static page-->
+      <button type="submit" id="submit">Submit</button>
+      
+   </form>
+   
+       
+</html>
